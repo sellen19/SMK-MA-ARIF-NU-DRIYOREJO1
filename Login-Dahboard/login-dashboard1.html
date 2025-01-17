@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - User Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../Login-Dahboard/login-dahsboard CSS/login-dashboard.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <html>
+      <body>
+        <div class="login-container">
+          <h2>Login</h2>
+          <div id="alert" class="alert">
+            Username dan password belum Anda isi, isi terlebih dahulu tuan.
+          </div>
+          <div id="alert-username" class="alert">
+            Username Anda belum terdaftar tuan.
+          </div>
+          <div id="alert-credentials" class="alert">
+            Username atau password Anda salah.
+          </div>
+          <form id="loginForm">
+            <div class="input-group">
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your username"
+              />
+            </div>
+            <div class="input-group">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+              />
+              <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+            </div>
+            <button type="submit" class="btn">
+              Login
+              <div class="spinner" id="spinner"></div>
+            </button>
+          </form>
+        </div>
+      </body>
+      <!-- Java Script login-->
+      <script src="../Login-Dahboard/JAVA SCRIPT LOGIN DASHBOARD/Login-Dahsboard.js"></script>
+  </head>
+</html>

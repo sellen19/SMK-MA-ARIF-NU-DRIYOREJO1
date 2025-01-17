@@ -1,0 +1,360 @@
+<html>
+  <head>
+    <title>List Data Alumni</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/Navbarmenu.css">
+    <link rel="stylesheet" href="../Menu_Profil-CSS/List-Alumni.css" />
+    <link rel="stylesheet" href="../CSS/dropdown.css" />
+    <link rel="stylesheet" href="../Menu_Profil-CSS/shapeinformasicontact-menuprofile.css">
+    <!-- Font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Icons link-->
+    <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"/>   
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+          <img src="../logo/LOGO2.png" alt="">
+          <div class="logo-text">
+              <h1>SMK MA'ARIF NU</h1>
+              <h2>DRIYOREJO</h2>
+          </div>
+                    <!-- pada Versi Mobile -->
+                    <body onclick="closeAllSubmenus(event)">
+                      <div class="sidebar" id="sidebar" onclick="event.stopPropagation()">
+                          <a href="../Home SMK/Home_SMK MA'ARIF NU.html"><i class="fas fa-home"></i>Home</a>
+                          <div class="menu-item" onclick="toggleSubmenu('profil-submenu', this)">
+                              <a href="#"><span><i class="fas fa-user"></i> Profil</span> <i class="fas fa-chevron-down"></i></a>
+                              <div class="submenu" id="profil-submenu">
+                                  <a href="../Menu-Profil/visi.html" onclick="closeSubmenuAndSidebar('profil-submenu')">Visi & Misi</a>
+                                  <a href="../Menu-Profil/Galerygurupendidikan.html" onclick="closeSubmenuAndSidebar('profil-submenu')">Guru & Tenaga Pendidikan</a>
+                                  <a href="../Menu-Profil/Profile-Sekolah.html" onclick="closeSubmenuAndSidebar('profil-submenu')">Profile Sekolah</a>
+                                  <a href="../Menu-Profil/galery.html" onclick="closeSubmenuAndSidebar('profil-submenu')">Galery Foto</a>
+                              </div>
+                          </div>
+                          <div class="menu-item" onclick="toggleSubmenu('jurusan-submenu', this)">
+                              <a href="#"><span><i class="fas fa-book"></i> Jurusan</span> <i class="fas fa-chevron-down"></i></a>
+                              <div class="submenu" id="jurusan-submenu">
+                                  <a href="../Menu-Jurusan/tb.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Tata Busana</a>
+                                  <a href="../Menu-Jurusan/tkj.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Komputer Dan Jaringan</a>
+                                  <a href="../Menu-Jurusan/titl.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Instalasi Tenaga Listrik</a>
+                                  <a href="../Menu-Jurusan/tkr.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Kendaraan Ringan</a>
+                                  <a href="../Menu-Jurusan/tbsm.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Dan Bisnis Sepeda Motor</a>
+                                  <a href="../Menu-Jurusan/otkp.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Administrasi Perkantoran</a>
+                                  <a href="../Menu-Jurusan/tpm.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Pemesinan</a>
+                              </div>
+                          </div>
+                          <div class="menu-item">
+                              <a href="../Berita/Berita-Page.html"><span><i class="fas fa-newspaper"></i> Berita</span></i></a>
+                          </div>
+                          <div class="ppdb">
+                              <a href="../Login PPDB/loginsekarang.html"><i class="fas fa-user-plus"></i> PPDB</a>
+                          </div>
+                      </div>
+                      <div class="main-content">
+                          <button class="menu-button" id="menu-button" onclick="toggleSidebar()"><span>Menu</span><i class="fas fa-bars"></i></button>
+                      </div>
+              <!-- Pada Versi Desktop -->      
+                  <ul class="navmenu">
+                    <div class="dropdownSI">
+                    <li><a href="../Home SMK/Home_SMK MA'ARIF NU.html">Home</a></li> 
+                    </div>
+                    <div class="dropdownSI">
+                      <ul>
+                        <li><a href="#">Profil</a></li>
+                      </ul>
+                      <div class="dropdown-content">
+                        <ul>
+                          <li><a href="../Menu-Profil/visi.html">Visi & Misi</a></li>
+                          <li><a href="../Menu-Profil/Galerygurupendidikan.html">Guru & Tenaga Kependidikan</a></li>
+                          <li><a href="../Menu-Profil/Profile-Sekolah.html">Profil Sekolah</a></li>
+                          <li><a href="../Menu-Profil/galery.html">Gallery Foto</a></li>
+                        </ul>
+                      </div>
+                    </div>
+            
+                    <div class="dropdownSI">
+                      <ul>
+                        <li><a href="#">Keahlian</a></li>
+                      </ul>
+                      <div class="dropdown-content">
+                        <ul>
+                          <li><a href="../Menu-Jurusan/tb.html">Tata Busana</a></li>
+                          <li><a href="../Menu-Jurusan/tkj.html">Teknik Komputer Dan Jaringan</a></li>
+                          <li><a href="../Menu-Jurusan/titl.html">Teknik Instalasi Tenaga Listrik</a></li>
+                          <li><a href="../Menu-Jurusan/tkr.html">Teknik Kendaraan Ringan</a></li>
+                          <li><a href="../Menu-Jurusan/tbsm.html">Teknik dan Bisnis Sepeda Motor</a></li>
+                          <li><a href="../Menu-Jurusan/otkp.html">Administrasi Perkantoran</a></li>
+                          <li><a href="../Menu-Jurusan/tpm.html">Teknik Permesinan</a></li>
+                        </ul>
+                      </div>
+                    </div>
+            
+                    <div class="dropdownSI">
+                      <ul>
+                        <li><a href="../Berita/Berita-Page.html" id="berita">Berita</a></li>
+                      </ul>
+                    </div>
+            
+                    <div class="dropdownSI">
+                      <ul>
+                        <li><a href="../Login PPDB/loginsekarang.html" id="program">PPDB</a></li>
+                      </ul>
+                    </div>
+                  </ul>
+          
+                </div>
+            </div>
+    <!-- alumni-->
+    <div class="header1">List Data Alumni</div>
+    <div class="container">
+      <div class="search-container">
+        <div class="entries-container">
+          <label for="entries">Tampilkan</label>
+          <select id="entries" onchange="changeEntries()">
+            <option value="15">15</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+          </select>
+          <span>entri</span>
+        </div>
+        <div>
+          <label for="search">Cari:</label>
+          <input
+            type="text"
+            id="search"
+            placeholder="Search..."
+            onkeyup="searchTable()"
+          />
+        </div>
+      </div>
+      <div class="table-container">
+        <table id="alumniTable">
+          <thead>
+            <tr>
+              <th class="sortable" onclick="sortTable(0)">
+                Nama <i class="fas fa-sort"></i>
+              </th>
+              <th class="sortable" onclick="sortTable(1)">
+                Jurusan <i class="fas fa-sort"></i>
+              </th>
+              <th class="sortable" onclick="sortTable(2)">
+                Lulusan <i class="fas fa-sort"></i>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Muhammad Agustian Azwar</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td>Tahun 2024</td>
+            </tr>
+            <tr>
+              <td>NONE</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td>Tahun 2024</td>
+            </tr>
+            <tr>
+              <td>NONE</td>
+              <td>Teknik Komputer Dan Jaringan</td>
+              <td>Tahun 2024</td>
+            </tr>
+            <tr>
+              <td>Neril Mutmainah</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td>Tahun 2024</td>
+            </tr>
+            <tr>
+              <td>Neril Mutmainah</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td>Tahun 2024</td>
+            </tr>
+            <tr>
+              <td>Olivia Zalina Harbi</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td>Tahun 2024</td>
+            </tr>
+            <tr>
+              <td>Adhelia Anjani</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td>Tahun 2023</td>
+            </tr>
+            <tr>
+              <td>Alya Dwi Rahmawati</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td>Tahun 2023</td>
+            </tr>
+            <tr>
+              <td>Nadia Safitri</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td>Tahun 2023</td>
+            </tr>
+            <tr>
+              <td>Ratu Indah Jaenudin</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td>Tahun 2023</td>
+            </tr>
+            <tr>
+              <td>Yulia Presia</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td>Tahun 2023</td>
+            </tr>
+            <tr>
+              <td>Devi Ismia</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td>Tahun 2022</td>
+            </tr>
+            <tr>
+              <td>Dwi Nur Aini</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td>Tahun 2022</td>
+            </tr>
+            <tr>
+              <td>Haviza Amara Putri</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td>Tahun 2022</td>
+            </tr>
+            <tr>
+              <td>Jessica Anelia Edgina Prianto</td>
+              <td>Otomatisasi Tata Kelola Perkantoran</td>
+              <td>Tahun 2022</td>
+            </tr>
+            <!-- Additional rows for the next page -->
+            <tr>
+              <td>John Doe</td>
+              <td>Computer Science</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>Business Administration</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>Michael Johnson</td>
+              <td>Engineering</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>Emily Davis</td>
+              <td>Mathematics</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>David Brown</td>
+              <td>Physics</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>Sarah Wilson</td>
+              <td>Chemistry</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>James Taylor</td>
+              <td>Biology</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>Linda Martinez</td>
+              <td>History</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>Robert Anderson</td>
+              <td>Political Science</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>Patricia Thomas</td>
+              <td>Economics</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>Charles Jackson</td>
+              <td>Psychology</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>Barbara White</td>
+              <td>Sociology</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>Christopher Harris</td>
+              <td>Philosophy</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>Mary Clark</td>
+              <td>Anthropology</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td>Daniel Lewis</td>
+              <td>Geography</td>
+              <td>2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination">
+        <div style="margin-right: auto">
+          <a href="#" onclick="prevPage()"
+            ><i class="fas fa-arrow-left"></i>
+            <span style="display: flex">Sebelumnya</span></a
+          >
+        </div>
+        <span id="entriesInfo">Menampilkan 1 sampai 15 dari 180 entri</span>
+        <div style="margin-left: auto">
+          <a href="#" onclick="nextPage()"
+            ><span style="display: flex">Selanjutnya</span>
+            <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+     <!-- contact-section -->
+     <section class="contact">
+      <div class="contact-location">
+        <div class="TextSMK-Contact">
+          <h5>SMK MA'ARIF NU DRIYOREJO</h5>
+        </div>
+        <div class="location">
+          <div class="location-text">
+            <h4>Location</h4>
+          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.242291419779!2d112.61401287357228!3d-7.326660672051002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78079aff3fd253%3A0x98ae8d85fe215d15!2sSMK%20Ma&#39;arif%20NU%20Driyorejo!5e0!3m2!1sen!2sid!4v1727060841314!5m2!1sen!2sid" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shape Buat Informasi Kontak -->
+          <div class="footer">
+              <div class="contact-info">
+                  <i class="fas fa-envelope"></i>
+                  <span>smknudry1@gmail.com</span>
+                  <i class="fas fa-phone"></i>
+                  <span>(031) 99026241</span>
+              </div>
+              <div class="pembatas-contact"></div>
+              <div class="social-media">
+                  <span>MEDIA SOSIAL</span>
+                  <a href="https://www.facebook.com/people/SMK-Maarif-NU-Driyorejo/100064653703989/"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/smkmaarifnudriyorejo/"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.youtube.com/@smknudry7220"><i class="fab fa-youtube"></i></a>
+              </div>
+          </div>
+           <!--  My Java Script-->
+           <script src="../JavaScript/java.js"></script>
+                      <!--  My Java Script-->
+                      <script src="../JavaScript/Alumni.js"></script>
+  </body>
+</html>

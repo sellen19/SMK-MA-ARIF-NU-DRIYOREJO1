@@ -1,0 +1,209 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Login and Sign Up Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../Login PPDB/Login_PPDB_CSS/Login_PPDB.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div
+      class="fixed top-0 left-0 right-0 bg-green-500 text-white text-center py-2 hidden"
+      id="successMessage"
+    >
+      <div class="flex items-center justify-center">
+        <i class="fa fa-check-circle mr-2"></i>
+        <span>Registration Successful! Redirecting to login...</span>
+      </div>
+    </div>
+
+    <div
+      class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md"
+      id="loginContainer"
+    >
+      <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
+      <form id="loginForm">
+        <div class="mb-4 relative">
+          <i class="fa fa-user absolute left-3 top-3 text-gray-400"></i>
+          <input
+            type="text"
+            id="username"
+            placeholder="Username"
+            class="pl-10 pr-4 py-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <div id="username-error" class="text-red-500 text-sm mt-1 hidden">
+            Username belum diisi, harap isi terlebih dahulu.
+          </div>
+          <div id="username-not-found" class="text-red-500 text-sm mt-1 hidden">
+            Username tidak ada / belum terdaftar.
+          </div>
+        </div>
+        <div class="mb-6 relative">
+          <i class="fa fa-lock absolute left-3 top-3 text-gray-400"></i>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            class="pl-10 pr-10 py-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <i
+            class="fa fa-eye absolute right-3 top-3 text-gray-400 cursor-pointer"
+            id="togglePassword"
+          ></i>
+          <div id="password-error" class="text-red-500 text-sm mt-1 hidden">
+            Password belum diisi, harap isi terlebih dahulu.
+          </div>
+          <div id="password-incorrect" class="text-red-500 text-sm mt-1 hidden">
+            Password salah, harap coba lagi.
+          </div>
+        </div>
+        <button
+          type="submit"
+          id="loginButton"
+          class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300 flex items-center justify-center"
+        >
+          <span id="buttonText">Login</span>
+          <i id="loadingIcon" class="fa fa-spinner fa-spin ml-2 hidden"></i>
+        </button>
+      </form>
+      <p class="text-center text-gray-600 mt-4">
+        Don't have an account?
+        <a href="#" id="signUpLink" class="text-blue-500 hover:underline"
+          >Sign up</a
+        >
+      </p>
+    </div>
+
+    <div
+      class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md hidden"
+      id="signUpContainer"
+    >
+      <h2 class="text-2xl font-bold text-center mb-6">Sign Up</h2>
+      <form id="signUpForm">
+        <div class="mb-4 relative">
+          <i class="fa fa-user absolute left-3 top-3 text-gray-400"></i>
+          <input
+            type="text"
+            id="signUpUsername"
+            placeholder="Username"
+            class="pl-10 pr-4 py-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <div
+            id="signUpUsernameError"
+            class="text-red-500 text-sm mt-1 hidden"
+          >
+            Username belum diisi, harap isi terlebih dahulu.
+          </div>
+        </div>
+        <div class="mb-4 relative">
+          <i class="fa fa-envelope absolute left-3 top-3 text-gray-400"></i>
+          <input
+            type="text"
+            id="signUpEmail"
+            placeholder="Email"
+            class="pl-10 pr-4 py-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <div id="signUpEmailError" class="text-red-500 text-sm mt-1 hidden">
+            Email belum diisi, harap isi terlebih dahulu.
+          </div>
+          <div
+            id="signUpEmailInvalidError"
+            class="text-red-500 text-sm mt-1 hidden"
+          >
+            Email harus ada @.
+          </div>
+          <div
+            id="signUpEmailExistsError"
+            class="text-red-500 text-sm mt-1 hidden"
+          >
+            Email sudah digunakan.
+          </div>
+        </div>
+        <div class="mb-4 relative">
+          <i class="fa fa-lock absolute left-3 top-3 text-gray-400"></i>
+          <input
+            type="password"
+            id="signUpPassword"
+            placeholder="Password"
+            class="pl-10 pr-10 py-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <i
+            class="fa fa-minus absolute right-10 top-3 text-gray-400"
+            id="passwordCriteriaIcon"
+          ></i>
+          <i
+            class="fa fa-eye absolute right-3 top-3 text-gray-400 cursor-pointer"
+            id="toggleSignUpPassword"
+          ></i>
+          <div
+            id="signUpPasswordError"
+            class="text-red-500 text-sm mt-1 hidden"
+          >
+            Password belum diisi, harap isi terlebih dahulu.
+          </div>
+          <div
+            id="signUpPasswordInvalidError"
+            class="text-red-500 text-sm mt-1 hidden"
+          >
+            Password harus minimal 5 karakter, mengandung 1 huruf kapital, 1
+            angka, dan 1 karakter khusus.
+          </div>
+        </div>
+        <div class="mb-6 relative">
+          <i class="fa fa-lock absolute left-3 top-3 text-gray-400"></i>
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm Password"
+            class="pl-10 pr-10 py-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <i
+            class="fa fa-minus absolute right-10 top-3 text-gray-400"
+            id="confirmPasswordCriteriaIcon"
+          ></i>
+          <i
+            class="fa fa-eye absolute right-3 top-3 text-gray-400 cursor-pointer"
+            id="toggleConfirmPassword"
+          ></i>
+          <div
+            id="confirmPasswordError"
+            class="text-red-500 text-sm mt-1 hidden"
+          >
+            Password tidak cocok, harap isi kembali.
+          </div>
+        </div>
+        <button
+          type="submit"
+          id="signUpButton"
+          class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300 flex items-center justify-center"
+        >
+          <span id="signUpButtonText">Sign Up</span>
+          <i
+            id="signUpLoadingIcon"
+            class="fa fa-spinner fa-spin ml-2 hidden"
+          ></i>
+        </button>
+      </form>
+      <p class="text-center text-gray-600 mt-4">
+        Already have an account?
+        <a
+          href="../PPDB/ppdb.html"
+          id="loginLink"
+          class="text-blue-500 hover:underline"
+          >Login</a
+        >
+      </p>
+    </div>
+
+    <!-- Java Script Login Sekarang -->
+    <script src="../Login PPDB/Login_PPDB_JS/Login_PPDB.js"></script>
+  </body>
+</html>

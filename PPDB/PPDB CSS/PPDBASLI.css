@@ -1,0 +1,48 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.slider img {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.sidebar {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+.sidebar.open {
+  transform: translateX(0);
+}
+.menu-icon {
+  transition: transform 0.3s ease-in-out;
+}
+.menu-icon.open {
+  transform: rotate(90deg);
+}
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guru & Tenaga Kependidikan</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="../Menu_Profil-CSS/Profil-Sekolah.css">
+    <link rel="stylesheet" href="../CSS/dropdown.css">
+    <link rel="stylesheet" href="../CSS/Navbarmenu.css">
+    <link rel="stylesheet" href="../Menu_Profil-CSS/shapeinformasicontact-menuprofile.css">
+    <!-- Font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Icons link-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+        <div class="logo">
+            <img src="../logo/LOGO2.png" alt="">
+            <div class="logo-text">
+                <h1>SMK MA'ARIF NU</h1>
+                <h2>DRIYOREJO</h2>
+            </div>
+          <!-- pada Versi Mobile -->
+          <body onclick="closeAllSubmenus(event)">
+            <div class="sidebar" id="sidebar" onclick="event.stopPropagation()">
+                <a href="../Home SMK/Home_SMK MA'ARIF NU.html"><i class="fas fa-home"></i>Home</a>
+                <div class="menu-item" onclick="toggleSubmenu('profil-submenu', this)">
+                    <a href="#"><span><i class="fas fa-user"></i> Profil</span> <i class="fas fa-chevron-down"></i></a>
+                    <div class="submenu" id="profil-submenu">
+                        <a href="../Menu-Profil/visi.html" onclick="closeSubmenuAndSidebar('profil-submenu')">Visi & Misi</a>
+                        <a href="../Menu-Profil/Galerygurupendidikan.html" onclick="closeSubmenuAndSidebar('profil-submenu')">Guru & Tenaga Pendidikan</a>
+                        <a href="../Menu-Profil/Profile-Sekolah.html" onclick="closeSubmenuAndSidebar('profil-submenu')">Profile Sekolah</a>
+                        <a href="../Menu-Profil/galery.html" onclick="closeSubmenuAndSidebar('profil-submenu')">Galery Foto</a>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleSubmenu('jurusan-submenu', this)">
+                    <a href="#"><span><i class="fas fa-book"></i> Jurusan</span> <i class="fas fa-chevron-down"></i></a>
+                    <div class="submenu" id="jurusan-submenu">
+                        <a href="../Menu-Jurusan/tb.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Tata Busana</a>
+                        <a href="../Menu-Jurusan/tkj.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Komputer Dan Jaringan</a>
+                        <a href="../Menu-Jurusan/titl.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Instalasi Tenaga Listrik</a>
+                        <a href="../Menu-Jurusan/tkr.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Kendaraan Ringan</a>
+                        <a href="../Menu-Jurusan/tbsm.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Dan Bisnis Sepeda Motor</a>
+                        <a href="../Menu-Jurusan/otkp.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Administrasi Perkantoran</a>
+                        <a href="../Menu-Jurusan/tpm.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Pemesinan</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="../Berita/Berita-Page.html"><span><i class="fas fa-newspaper"></i> Berita</span></i></a>
+                </div>
+                <div class="ppdb">
+                    <a href="../Login PPDB/loginsekarang.html"><i class="fas fa-user-plus"></i> PPDB</a>
+                </div>
+            </div>
+            <div class="main-content">
+                <button class="menu-button" id="menu-button" onclick="toggleSidebar()"><span>Menu</span><i class="fas fa-bars"></i></button>
+            </div>
+    <!-- Pada Versi Desktop -->      
+        <ul class="navmenu">
+          <div class="dropdownSI">
+          <li><a href="../Home SMK/Home_SMK MA'ARIF NU.html">Home</a></li> 
+          </div>
+          <div class="dropdownSI">
+            <ul>
+              <li><a href="#">Profil</a></li>
+            </ul>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="../Menu-Profil/visi.html">Visi & Misi</a></li>
+                <li><a href="../Menu-Profil/Galerygurupendidikan.html">Guru & Tenaga Kependidikan</a></li>
+                <li><a href="../Menu-Profil/Profile-Sekolah.html">Profil Sekolah</a></li>
+                <li><a href="../Menu-Profil/galery.html">Gallery Foto</a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="dropdownSI">
+            <ul>
+              <li><a href="#">Keahlian</a></li>
+            </ul>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="../Menu-Jurusan/tb.html">Tata Busana</a></li>
+                <li><a href="../Menu-Jurusan/tkj.html">Teknik Komputer Dan Jaringan</a></li>
+                <li><a href="../Menu-Jurusan/titl.html">Teknik Instalasi Tenaga Listrik</a></li>
+                <li><a href="../Menu-Jurusan/tkr.html">Teknik Kendaraan Ringan</a></li>
+                <li><a href="../Menu-Jurusan/tbsm.html">Teknik dan Bisnis Sepeda Motor</a></li>
+                <li><a href="../Menu-Jurusan/otkp.html">Administrasi Perkantoran</a></li>
+                <li><a href="../Menu-Jurusan/tpm.html">Teknik Permesinan</a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="dropdownSI">
+            <ul>
+              <li><a href="../Berita/Berita-Page.html" id="berita">Berita</a></li>
+            </ul>
+          </div>
+  
+          <div class="dropdownSI">
+            <ul>
+              <li><a href="../Login PPDB/loginsekarang.html" id="program">PPDB</a></li>
+            </ul>
+          </div>
+        </ul>
+
+      </div>
+  </div>
+
+    <!-- Profil Sekolah Page -->
+    <div class="header1">Profile Sekolah</div>
+    <div class="container1">
+        <div class="news-content">
+            <img alt="Detailed view of the news event" class="news-image" src="../logo/LOGO2.png"/>
+            <div class="p-6">
+                <h2>Latar Belakang dan Sejarah Singkat</h2>
+                <h6>SMK Ma’arif NU Driyorejo adalah lembaga pendidikan kejuruan yang berada di bawah naungan Lembaga Pendidikan Ma’arif NU Randegansari, sebuah badan pendidikan yang berkomitmen pada peningkatan kualitas pendidikan berbasis nilai-nilai Islam Ahlus Sunnah Wal Jama’ah. Berdiri sejak tahun 2008, SMK Ma’arif NU Driyorejo awalnya didirikan untuk memenuhi kebutuhan masyarakat sekitar terhadap pendidikan kejuruan yang mampu mencetak tenaga kerja terampil sekaligus memiliki moral yang tinggi.</h6>
+                <h6>Seiring waktu, sekolah ini terus berkembang secara pesat, baik dari segi jumlah siswa, fasilitas, maupun reputasi. Jumlah siswa yang semula hanya puluhan kini mencapai lebih dari 1.000 siswa. Hal ini mencerminkan kepercayaan masyarakat terhadap kualitas pendidikan yang ditawarkan oleh sekolah ini.</h6>
+                <h6>Pada tahun 2024, SMK Ma’arif NU Driyorejo berhasil meraih predikat sebagai Sekolah Pusat Keunggulan (PK), sebuah program dari pemerintah yang bertujuan menjadikan sekolah sebagai model pendidikan kejuruan yang unggul dan berdaya saing global. Selain itu, sekolah ini telah mendapatkan akreditasi A, menunjukkan kualitas manajemen, fasilitas, dan pembelajaran yang telah memenuhi standar tertinggi pendidikan nasional.</h6>
+                <h1>Kompetensi Keahlian</h1>
+                <h6>SMK Ma’arif NU Driyorejo menawarkan 7 kompetensi keahlian unggulan yang dirancang untuk memenuhi kebutuhan dunia kerja yang terus berkembang:</h6>
+                <p1>1.Teknik Kendaraan Ringan (TKR):</p1>
+                <p>Membekali siswa dengan keterampilan dalam perawatan, perbaikan, dan teknologi kendaraan ringan.</p>
+                <p1>2.Teknik Komputer dan Jaringan (TKJ):</p1>
+                <p>Fokus pada penguasaan teknologi informasi, jaringan komputer, dan keamanan siber.</p>
+                <p1>3.Tata Busana (TB):</p1>
+                <p>Mengajarkan desain, pola, dan produksi pakaian dengan pendekatan kreatif dan inovatif.</p>
+                <p1>4.Manajemen Perkantoran dan Layanan Bisnis (MPLB):</p1>
+                <p>Membekali siswa dengan keterampilan administrasi, pelayanan, dan manajemen kantor modern.</p>
+                <p1>5.Teknik Pemesinan (TPM):</p1>
+                <p>Menyediakan pelatihan dalam pengoperasian mesin-mesin industri serta pengembangan produk manufaktur.</p>
+                <p1>6.Teknik Instalasi Tenaga Listrik (TITL):</p1>
+                <p>Fokus pada instalasi listrik, perawatan sistem tenaga, dan energi terbarukan.</p>
+                <p1>7.Teknik dan Bisnis Sepeda Motor (TBSM):</p1>
+                <p>Mengajarkan teknologi terkini dalam perawatan dan perbaikan sepeda motor, termasuk motor berbasis listrik.</p>
+                <h1>Fasilitas Pendukung</h1>
+                <h6>Untuk menunjang kegiatan belajar mengajar, SMK Ma’arif NU Driyorejo terus berinvestasi dalam pengembangan fasilitas modern dan lengkap, seperti:</h6>
+                <p>1.Laboratorium Komputer dan Jaringan: Mendukung pembelajaran berbasis teknologi informasi.</p>
+                <p>2.Workshop Teknik Kendaraan Ringan dan TBSM: Bengkel lengkap dengan peralatan standar industri.</p>
+                <p>3.Studio Tata Busana: Fasilitas untuk desain, menjahit, dan pembuatan produk busana.</p>
+                <p>4.Ruang Praktik Pemesinan: Workshop untuk praktik dengan mesin bubut, CNC, dan peralatan manufaktur lainnya.</p>
+                <p>5.Ruang Praktik Instalasi Listrik: Dilengkapi alat-alat simulasi tenaga listrik modern.</p>
+                <p>6.Front Office dan Laboratorium Komputer: Mendukung administrasi perkantoran dan pembelajaran berbasis teknologi informasi.</p>
+                <h1>Ekstrakurikuler dan Pengembangan Diri</h1>
+                <h6>Untuk mendukung potensi siswa secara menyeluruh, SMK Ma’arif NU Driyorejo menyediakan berbagai kegiatan ekstrakurikuler yang meliputi:</h6>
+                <p>1.Pramuka: Melatih kedisiplinan dan kepemimpinan.</p>
+                <p>2.Rohani Islam (Rohis): Mendalami keilmuan agama dan pembentukan karakter Islami.</p>
+                <p>3.Olahraga: Futsal, voli, dan pencak silat.</p>
+                <p>4.Seni dan Budaya: musik, Tari dan Paskibra</p>
+                <p>5.Kegiatan ekstra lainnya</p>
+                <h1>Keunggulan dan Komitmen Sekolah</h1>
+                <h6>SMK Ma’arif NU Driyorejo memiliki sejumlah keunggulan yang menjadi daya tarik utama, di antaranya:</h6>
+                <p>1.Akreditasi A: Bukti kualitas manajemen dan proses pembelajaran yang unggul.</p>
+                <p>2.Pusat Keunggulan 2024: Menjadi model sekolah kejuruan yang inovatif.</p>
+                <p>3.Kompetensi Keahlian yang Relevan: Menyediakan keahlian yang sesuai dengan kebutuhan industri.</p>
+                <p>4.Tenaga Pendidik Profesional: Guru-guru yang berpengalaman dan bersertifikasi.</p>
+                <p>5.Lingkungan Belajar Islami: Mengintegrasikan pendidikan agama dalam kurikulum.</p>
+                <p>6.Kesempatan Magang dan Kerja: Berkat kemitraan yang kuat dengan dunia industri.</p>
+                <h1>Masa Depan SMK Ma’arif NU Driyorejo</h1>
+                <h6>Melihat perkembangan dan prestasi yang diraih, SMK Ma’arif NU Driyorejo optimis menghadapi masa depan. Beberapa rencana strategis yang akan dikembangkan meliputi:</h6>
+                <p>1.Penambahan fasilitas berbasis teknologi untuk mendukung pembelajaran era digital.</p>
+                <p>2.Peningkatan kerja sama dengan industri nasional dan internasional.</p>
+                <p>3.Penguatan program pendidikan karakter Islami.</p>
+                <p>4.Pengembangan program kewirausahaan berbasis kompetensi keahlian.</p>
+            </div>
+        </div>
+        </div>
+
+  <!-- contact-section -->
+  <section class="contact">
+    <div class="contact-location">
+      <div class="TextSMK-Contact">
+        <h5>SMK MA'ARIF NU DRIYOREJO</h5>
+      </div>
+      <div class="location">
+        <div class="location-text">
+          <h4>Location</h4>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.242291419779!2d112.61401287357228!3d-7.326660672051002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78079aff3fd253%3A0x98ae8d85fe215d15!2sSMK%20Ma&#39;arif%20NU%20Driyorejo!5e0!3m2!1sen!2sid!4v1727060841314!5m2!1sen!2sid" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shape Buat Informasi Kontak -->
+        <div class="footer">
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <span>smknudry1@gmail.com</span>
+                <i class="fas fa-phone"></i>
+                <span>(031) 99026241</span>
+            </div>
+            <div class="pembatas-contact"></div>
+            <div class="social-media">
+                <span>MEDIA SOSIAL</span>
+                <a href="https://www.facebook.com/people/SMK-Maarif-NU-Driyorejo/100064653703989/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/smkmaarifnudriyorejo/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@smknudry7220"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        
+    <!--  My Java Script Untuk Material -->
+    <script src="../JavaScript/java.js"></script>
+</body>
+</html>
