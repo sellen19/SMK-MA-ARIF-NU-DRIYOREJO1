@@ -1,0 +1,292 @@
+<html>
+  <head>
+    <title>SMK MA'ARIF-SEMUA BERITA</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../Berita/Berita-CSS/Berita.css" />
+    <link rel="stylesheet" href="../CSS/dropdown.css">
+    <link rel="stylesheet" href="../CSS/Navbarmenu.css">
+    <link rel="stylesheet" href="../Berita/Berita-CSS/Halaman-Tengah-berita.css">
+    <link rel="stylesheet" href="../Berita/Berita-CSS/shapeinformasicontact-berita.css">
+        <!-- Font link -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Icons link-->
+        <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+      />
+  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+          <img src="../logo/LOGO2.png" alt="">
+          <div class="logo-text">
+              <h1>SMK MA'ARIF NU</h1>
+              <h2>DRIYOREJO</h2>
+          </div>
+          <!-- pada Versi Mobile -->
+          <body onclick="closeAllSubmenus(event)">
+            <div class="sidebar" id="sidebar" onclick="event.stopPropagation()">
+                <a href="../Home SMK/Home_SMK MA'ARIF NU.html"><i class="fas fa-home"></i>Home</a>
+                <div class="menu-item" onclick="toggleSubmenu('profil-submenu', this)">
+                    <a href="#"><span><i class="fas fa-user"></i> Profil</span> <i class="fas fa-chevron-down"></i></a>
+                    <div class="submenu" id="profil-submenu">
+                        <a href="../Menu-Profil/visi.html" onclick="closeSubmenuAndSidebar('profil-submenu')">Visi & Misi</a>
+                        <a href="../Menu-Profil/Galerygurupendidikan.html" onclick="closeSubmenuAndSidebar('profil-submenu')">Guru & Tenaga Pendidikan</a>
+                        <a href="../Menu-Profil/Profile-Sekolah.html" onclick="closeSubmenuAndSidebar('profil-submenu')">Profile Sekolah</a>
+                        <a href="../Menu-Profil/galery.html" onclick="closeSubmenuAndSidebar('profil-submenu')">Galery Foto</a>
+                    </div>
+                </div>
+                <div class="menu-item" onclick="toggleSubmenu('jurusan-submenu', this)">
+                    <a href="#"><span><i class="fas fa-book"></i> Jurusan</span> <i class="fas fa-chevron-down"></i></a>
+                    <div class="submenu" id="jurusan-submenu">
+                        <a href="../Menu-Jurusan/tb.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Tata Busana</a>
+                        <a href="../Menu-Jurusan/tkj.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Komputer Dan Jaringan</a>
+                        <a href="../Menu-Jurusan/titl.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Instalasi Tenaga Listrik</a>
+                        <a href="../Menu-Jurusan/tkr.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Kendaraan Ringan</a>
+                        <a href="../Menu-Jurusan/tbsm.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Dan Bisnis Sepeda Motor</a>
+                        <a href="../Menu-Jurusan/otkp.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Administrasi Perkantoran</a>
+                        <a href="../Menu-Jurusan/tpm.html" onclick="closeSubmenuAndSidebar('jurusan-submenu')">Teknik Pemesinan</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="../Berita/Berita-Page.html"><span><i class="fas fa-newspaper"></i> Berita</span></i></a>
+                </div>
+                <div class="ppdb">
+                    <a href="../Login PPDB/loginsekarang.html"><i class="fas fa-user-plus"></i> PPDB</a>
+                </div>
+            </div>
+            <div class="main-content">
+                <button class="menu-button" id="menu-button" onclick="toggleSidebar()"><span>Menu</span><i class="fas fa-bars"></i></button>
+            </div>
+    <!-- Pada Versi Desktop -->      
+        <ul class="navmenu">
+          <div class="dropdownSI">
+          <li><a href="../Home SMK/Home_SMK MA'ARIF NU.html">Home</a></li> 
+          </div>
+          <div class="dropdownSI">
+            <ul>
+              <li><a href="#">Profil</a></li>
+            </ul>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="../Menu-Profil/visi.html">Visi & Misi</a></li>
+                <li><a href="../Menu-Profil/Galerygurupendidikan.html">Guru & Tenaga Kependidikan</a></li>
+                <li><a href="../Menu-Profil/Profile-Sekolah.html">Profil Sekolah</a></li>
+                <li><a href="../Menu-Profil/galery.html">Gallery Foto</a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="dropdownSI">
+            <ul>
+              <li><a href="#">Keahlian</a></li>
+            </ul>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="../Menu-Jurusan/tb.html">Tata Busana</a></li>
+                <li><a href="../Menu-Jurusan/tkj.html">Teknik Komputer Dan Jaringan</a></li>
+                <li><a href="../Menu-Jurusan/titl.html">Teknik Instalasi Tenaga Listrik</a></li>
+                <li><a href="../Menu-Jurusan/tkr.html">Teknik Kendaraan Ringan</a></li>
+                <li><a href="../Menu-Jurusan/tbsm.html">Teknik dan Bisnis Sepeda Motor</a></li>
+                <li><a href="../Menu-Jurusan/otkp.html">Administrasi Perkantoran</a></li>
+                <li><a href="../Menu-Jurusan/tpm.html">Teknik Permesinan</a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="dropdownSI">
+            <ul>
+              <li><a href="../Berita/Berita-Page.html" id="berita">Berita</a></li>
+            </ul>
+          </div>
+  
+          <div class="dropdownSI">
+            <ul>
+              <li><a href="../Login PPDB/loginsekarang.html" id="program">PPDB</a></li>
+            </ul>
+          </div>
+        </ul>
+
+      </div>
+  </div>
+
+    <!-- Isi berita -->
+    <div class="head">
+      <h1>Semua Berita</h1>
+    </div>
+    <div class="container2">
+      <div class="main-content-berita">
+        <div class="news-item" data-url="../Detail-Berita/Page1.html">
+          <img
+            alt="Group of people posing for a photo"
+            height="150"
+            src="https://storage.googleapis.com/a1aa/image/pqyxsHTd4EouHZbTYVepEsz2GGG0rEMhe0rN95jQJ4rH4G2TA.jpg"
+            width="150"
+          />
+          <div>
+            <h2>
+              Penilaian Kinerja Kepala Sekolah Sebagai Pemimpin Pembelajaran di
+              Sekolah
+            </h2>
+            <p>dibuat pada Senin, 25 November 2024</p>
+            <p>
+              contoh
+            </p>
+            <a href="../Detail-Berita/Page1.html"
+              ><i class="fas fa-arrow-circle-right"></i> Read More</a
+            >
+          </div>
+        </div>
+        <div class="news-item" data-url="page2.html">
+          <img
+            alt="Students participating in an outdoor activity"
+            height="150"
+            src="https://storage.googleapis.com/a1aa/image/fRM5csbuyETpZ62peeoG9eTvWv6S7zkc9AylhiFjEj2ngbYPB.jpg"
+            width="150"
+          />
+          <div>
+            <h2>
+              LDKS Membentuk Karakter Siswa Kreatif dan Memiliki Jiwa
+              Kepemimpinan
+            </h2>
+            <p>dibuat pada Sabtu, 23 November 2024</p>
+            <p>
+              contoh
+            </p>
+            <a href="page2.html"
+              ><i class="fas fa-arrow-circle-right"></i> Read More</a
+            >
+          </div>
+        </div>
+        <div class="news-item" data-url="page3.html">
+          <img
+            alt="Students participating in an outdoor activity"
+            height="150"
+            src="https://placehold.co/150x150"
+            width="150"
+          />
+          <div>
+            <h2>Judul Berita 3</h2>
+            <p>dibuat pada Minggu, 24 November 2024</p>
+            <p>Deskripsi singkat berita 3...</p>
+            <a href="page3.html"
+              ><i class="fas fa-arrow-circle-right"></i> Read More</a
+            >
+          </div>
+        </div>
+        <div class="news-item" data-url="page4.html">
+          <img
+            alt="Students participating in an outdoor activity"
+            height="150"
+            src="https://placehold.co/150x150"
+            width="150"
+          />
+          <div>
+            <h2>Judul Berita 4</h2>
+            <p>dibuat pada Senin, 25 November 2024</p>
+            <p>Deskripsi singkat berita 4...</p>
+            <a href="page4.html"
+              ><i class="fas fa-arrow-circle-right"></i> Read More</a
+            >
+          </div>
+        </div>
+        <div class="pagination">
+          <a href="#">&laquo;</a>
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">&raquo;</a>
+        </div>
+      </div>
+      <div class="sidebar-search">
+        <h3>Cari Berita</h3>
+        <div class="search-box">
+          <input
+            id="searchInput"
+            onkeyup="searchNews()"
+            placeholder="Search..."
+            type="text"
+          />
+          <i class="fas fa-search"></i>
+        </div>
+        <h3>Kategori</h3>
+        <ul>
+          <li><a href="category1.html">Tidak ada Kategori</a></li>
+          <li>
+            <a href="jobfair.html">Job Fair</a>
+            <ul>
+              <li><a href="subcategory1.html">Subcategory 1</a></li>
+              <li><a href="subcategory2.html">Subcategory 2</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="peringatan.html">Peringatan Hari Besar</a>
+            <ul>
+              <li><a href="subcategory1.html">Subcategory 1</a></li>
+              <li><a href="subcategory2.html">Subcategory 2</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="ekstrakurikuler.html">Ekstra Kurikuler</a>
+            <ul>
+              <li><a href="subcategory1.html">Subcategory 1</a></li>
+              <li><a href="subcategory2.html">Subcategory 2</a></li>
+            </ul>
+          </li>
+          <li><a href="umum.html">Umum</a></li>
+          <li><a href="lomba.html">Lomba</a></li>
+          <li><a href="teachingfactory.html">Teaching Factory</a></li>
+          <li><a href="prestasi.html">Prestasi</a></li>
+        </ul>
+      </div>
+    </div>
+
+  <!-- contact-section -->
+  <section class="contact">
+    <div class="contact-location">
+      <div class="TextSMK-Contact">
+        <h5>SMK MA'ARIF NU DRIYOREJO</h5>
+      </div>
+      <div class="location">
+        <div class="location-text">
+          <h4>Location</h4>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.242291419779!2d112.61401287357228!3d-7.326660672051002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78079aff3fd253%3A0x98ae8d85fe215d15!2sSMK%20Ma&#39;arif%20NU%20Driyorejo!5e0!3m2!1sen!2sid!4v1727060841314!5m2!1sen!2sid" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shape Buat Informasi Kontak -->
+        <div class="footer">
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <span>smknudry1@gmail.com</span>
+                <i class="fas fa-phone"></i>
+                <span>(031) 99026241</span>
+            </div>
+            <div class="pembatas-contact"></div>
+            <div class="social-media">
+                <span>MEDIA SOSIAL</span>
+                <a href="https://www.facebook.com/people/SMK-Maarif-NU-Driyorejo/100064653703989/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/smkmaarifnudriyorejo/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@smknudry7220"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    <!--  My Java Script-->
+    <script src="../JavaScript/Berita.js"></script>
+        <!--  My Java Script-->
+        <script src="../JavaScript/java.js"></script>
+  </body>
+</html>
