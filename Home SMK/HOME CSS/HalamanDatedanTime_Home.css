@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container1 {
+  display: flex;
+  align-items: center;
+  background-color: #d4b82b;
+  margin-top: 20px;
+  padding: 0px; /* Ini Dibuat Untuk Membesarkan   background-color: #756c6c; */
+  border-radius: 25px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.date-time {
+  background-color: #1f7650;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.date-time span {
+  display: block;
+}
+.text {
+  color: #333;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  flex-grow: 1;
+}
+.text span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.text.paused span {
+  animation-play-state: paused;
+}
+
+/* responsive */
+@media (max-width: 630px) {
+  .date-time span {
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    justify-content: space-around;
+  }
+}
+
+/* responsive */
+@media (max-width: 360px) {
+  .date-time {
+    flex-direction: column;
+    flex-wrap: wrap;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .date-time .date span {
+    font-size: 10px;
+  }
+}
